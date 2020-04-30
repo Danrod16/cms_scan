@@ -28,18 +28,18 @@
       <% @companies.each do |company| %>
         <tr>
           <td><%= company.name %></td>
-          <td><%= company.price %></td>
-          <td><%= company.design_freedom %>/10</td>
-          <td><%= company.code_quality %>/10</td>
-          <td><%= company.seo %>/10</td>
-          <td><%= company.site_security %>/10</td>
-          <td><%= company.user_friendliness %>/10</td>
-          <td><%= company.support %>/10</td>
-          <td><%= company.collaboration %>/10</td>
-          <td><%= company.e_commerce %>/10</td>
-          <td><%= company.blog %>/10</td>
-          <td><%= company.site_speed %>/10</td>
-          <td><%= company.fees %></td>
+          <td><span><%= company.price %>€</span></td>
+          <td><span><%= company.design_freedom %></span>/10</td>
+          <td><span><%= company.code_quality %></span>/10</td>
+          <td><span><%= company.seo %></span>/10</td>
+          <td><span><%= company.site_security %></span>/10</td>
+          <td><span><%= company.user_friendliness %></span>/10</td>
+          <td><span><%= company.support %></span>/10</td>
+          <td><span><%= company.collaboration %></span>/10</td>
+          <td><span><%= company.e_commerce %></span>/10</td>
+          <td><span><%= company.blog %></span>/10</td>
+          <td><span><%= company.site_speed %></span>/10</td>
+          <td><span><%= company.fees %></span>%</td>
           <td><%= link_to 'Show', company %></td>
           <td><%= link_to 'Edit', edit_company_path(company) %></td>
           <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
