@@ -11,7 +11,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.string :user_friendliness
       t.string :support
       t.string :collaboration
-      t.string :e-commerce
+      t.string :e_commerce
       t.string :blog
       t.string :site_speed
       t.string :fees
