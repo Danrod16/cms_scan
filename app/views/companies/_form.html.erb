@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@company) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :website %>
+    <%= f.input :price %>
+    <%= f.input :design_freedom %>
+    <%= f.input :code_quality %>
+    <%= f.input :seo %>
+    <%= f.input :site_security %>
+    <%= f.input :user_friendliness %>
+    <%= f.input :support %>
+    <%= f.input :collaboration %>
+    <%= f.input :e-commerce %>
+    <%= f.input :blog %>
+    <%= f.input :site_speed %>
+    <%= f.input :fees %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
