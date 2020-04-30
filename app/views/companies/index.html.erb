@@ -1,56 +1,55 @@
 <div class="container">
+<section style="padding-top: 50px;">
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <h1>Companies</h1>
 
-<h1>Companies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Website</th>
-      <th>Price</th>
-      <th>Design freedom</th>
-      <th>Code quality</th>
-      <th>Seo</th>
-      <th>Site security</th>
-      <th>User friendliness</th>
-      <th>Support</th>
-      <th>Collaboration</th>
-      <th>E-commerce</th>
-      <th>Blog</th>
-      <th>Site speed</th>
-      <th>Fees</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @companies.each do |company| %>
+  <table class="table table-hover">
+    <thead>
       <tr>
-        <td><%= company.name %></td>
-        <td><%= company.website %></td>
-        <td><%= company.price %></td>
-        <td><%= company.design_freedom %></td>
-        <td><%= company.code_quality %></td>
-        <td><%= company.seo %></td>
-        <td><%= company.site_security %></td>
-        <td><%= company.user_friendliness %></td>
-        <td><%= company.support %></td>
-        <td><%= company.collaboration %></td>
-        <td><%= company.e_commerce %></td>
-        <td><%= company.blog %></td>
-        <td><%= company.site_speed %></td>
-        <td><%= company.fees %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th><i class="fas fa-euro-sign"></i></th>
+        <th><i class="fas fa-paint-brush"></i></th>
+        <th><i class="fas fa-code"></i></th>
+        <th><i class="fab fa-google"></i></th>
+        <th><i class="fas fa-shield-alt"></i></th>
+        <th><i class="fas fa-user-astronaut"></i></th>
+        <th><i class="fas fa-phone-alt"></i></th>
+        <th><i class="fas fa-users"></i></th>
+        <th><i class="fas fa-shopping-cart"></i></th>
+        <th><i class="fas fa-blog"></i></th>
+        <th><i class="fas fa-tachometer-alt"></i></th>
+        <th><i class="fas fa-percentage"></i></th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.name %></td>
+          <td><%= company.price %></td>
+          <td><%= company.design_freedom %>/10</td>
+          <td><%= company.code_quality %>/10</td>
+          <td><%= company.seo %>/10</td>
+          <td><%= company.site_security %>/10</td>
+          <td><%= company.user_friendliness %>/10</td>
+          <td><%= company.support %>/10</td>
+          <td><%= company.collaboration %>/10</td>
+          <td><%= company.e_commerce %>/10</td>
+          <td><%= company.blog %>/10</td>
+          <td><%= company.site_speed %>/10</td>
+          <td><%= company.fees %></td>
+          <td><%= link_to 'Show', company %></td>
+          <td><%= link_to 'Edit', edit_company_path(company) %></td>
+          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Company', new_company_path %>
-</div>
+  <br>
+
+  <%= link_to 'New Company', new_company_path %>
+  </div>
+</section>
