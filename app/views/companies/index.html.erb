@@ -3,7 +3,6 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Companies</h1>
-
   <table class="table table-hover">
     <thead>
       <tr>
@@ -23,7 +22,6 @@
         <th colspan="3"></th>
       </tr>
     </thead>
-
     <tbody>
       <% @companies.each do |company| %>
         <tr>
@@ -40,16 +38,19 @@
           <td><span><%= company.blog %></span>/10</td>
           <td><span><%= company.site_speed %></span>/10</td>
           <td><span><%= company.fees %></span>%</td>
+        <% if current_user && current_user.admin? %>
           <td><%= link_to 'Show', company %></td>
           <td><%= link_to 'Edit', edit_company_path(company) %></td>
           <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
 
   <br>
-
-  <%= link_to 'New Company', new_company_path %>
+  <% if current_user && current_user.admin? %>
+    <%= link_to 'New Company', new_company_path %>
+  <% end %>
   </div>
 </section>
